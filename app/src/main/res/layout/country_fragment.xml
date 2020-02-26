@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CountryFragment">
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:id="@+id/progressBar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        style="@style/NormalTextStyle"
+        android:id="@+id/selectItemText"
+        android:text="@string/select_for_details" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detailsLayout"
+            android:layout_margin="@dimen/main_margin"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameText"
+                style="@style/TitleTextStyle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_main_margin"
+                android:id="@+id/nativeText"
+                style="@style/TitleTextStyle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_main_margin"
+                android:id="@+id/flagText"
+                style="@style/TitleTextStyle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_main_margin"
+                android:id="@+id/currencyText"
+                style="@style/TitleTextStyle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_main_margin"
+                android:id="@+id/languagesText"
+                style="@style/TitleTextStyle"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>

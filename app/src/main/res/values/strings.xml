@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Countries</string>
+    <string name="select_for_details">Select country to see details</string>
+    <string name="name">Name: %s</string>
+    <string name="native_text">Native: %s</string>
+    <string name="flag">Flag: %s</string>
+    <string name="currency">Currency: %s</string>
+    <string name="languages">Languages: %s</string>
+    <string name="language_name_code">name: %s code: %s</string>
+</resources>
