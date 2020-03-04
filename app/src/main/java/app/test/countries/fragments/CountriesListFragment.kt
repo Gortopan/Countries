@@ -30,7 +30,7 @@ class CountriesListFragment : Fragment(), ICountrySelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(this)
-            .get(CountriesListViewModel()::class.java)
+            .get(CountriesListViewModel::class.java)
     }
 
     override fun onCreateView(
@@ -44,7 +44,7 @@ class CountriesListFragment : Fragment(), ICountrySelectedListener {
         super.onViewCreated(view, savedInstanceState)
         val dao = CountriesDatabase.getInstance(context ?: return).selectedCountriesDao()
         viewModel.countries.observe(viewLifecycleOwner, Observer {
-            adapter.countries.addAll(it)
+            adapter.countries = it
         })
         viewModel.isLoading.observe(viewLifecycleOwner, Observer {
             progressBar.visibility = if (it) VISIBLE else GONE

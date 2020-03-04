@@ -15,7 +15,7 @@ class CountriesAdapter(
     private val countrySelectedListener: ICountrySelectedListener
 ) : RecyclerView.Adapter<ViewHolder>() {
 
-    var countries = ArrayList<Countries>()
+    var countries: List<Countries> = emptyList()
     set(value) {
         field = value
         notifyDataSetChanged()
